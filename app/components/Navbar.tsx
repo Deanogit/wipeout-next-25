@@ -11,7 +11,7 @@ export default function Navbar() {
             {/* Wipeout Logo - mobile */}
           </div>
         </Link>
-        <ul className="flex items-center gap-2.5">
+        <ul className="flex items-center gap-3">
           <li className="text-sm uppercase cursor-pointer">
             <Link href="/tv">TV</Link>
           </li>

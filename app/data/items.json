@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Castelejo Caverns",
+    "description": "Caverns in Castelejo, served on the rocks",
+    "likes": 1847,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-03-15T14:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Bombs in Bordeira",
+    "description": "Winter shows it's teeth",
+    "likes": 2546,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-06-22T15:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Gone Fishin'",
+    "description": "Catch of the day",
+    "likes": 956,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-08-03T15:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Equal Shred - Equal Pay",
+    "description": "Don't be a bone-head, respect the crew",
+    "likes": 10311,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-09-03T15:00:00Z"
+  }
+]

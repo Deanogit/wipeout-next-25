@@ -34,5 +34,23 @@
     "image": "https://place-hold.it/300",
     "category": "t-shirts",
     "dateAdded": "2023-09-03T15:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Zavial Brutal",
+    "description": "Technical Riding",
+    "likes": 5287,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-10-03T15:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Locals Only",
+    "description": "Pay to play",
+    "likes": 7484,
+    "image": "https://place-hold.it/300",
+    "category": "t-shirts",
+    "dateAdded": "2023-11-03T15:00:00Z"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Castelejo Caverns",
-    "description": "Caverns in Castelejo, served on the rocks",
+    "description": "Served on the rocks",
     "likes": 1847,
     "image": "https://place-hold.it/300",
     "category": "t-shirts",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Bombs in Bordeira",
-    "description": "Winter shows it's teeth",
+    "description": "Winter wonderland",
     "likes": 2546,
     "image": "https://place-hold.it/300",
     "category": "t-shirts",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Equal Shred - Equal Pay",
+    "name": "Equal Shred - Equal Spray",
     "description": "Don't be a bone-head, respect the crew",
     "likes": 10311,
     "image": "https://place-hold.it/300",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "name": "Zavial Brutal",
+    "name": "Technical Zavial",
     "description": "Technical Riding",
     "likes": 5287,
     "image": "https://place-hold.it/300",

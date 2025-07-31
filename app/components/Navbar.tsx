@@ -5,8 +5,8 @@ import wipeoutLogo from '@/public/wipeout-logo.png';
 export default function Navbar() {
   return (
     <header className="w-full bg-gray-50 text-green-500 top-0 left-0 right-0 fixed z-30 opacity-80 hover:opacity-95 duration-300 shadow-lg">
-      <nav className="flex justify-between px-6 py-4">
-        <Link href="/">
+      <nav className="justify-between px-6 py-4 flex md:mx-8">
+        <Link href="/" className="m-auto md:m-0">
           <div className="relative cursor-pointer">
             {/* Wipeout Logo */}
             <Image
@@ -19,7 +19,7 @@ export default function Navbar() {
             {/* Wipeout Logo - mobile */}
           </div>
         </Link>
-        <ul className="flex items-center gap-3">
+        <ul className="items-center gap-3 hidden md:flex">
           {/* <li className="text-sm uppercase cursor-pointer">
             <Link href="/tv">TV</Link>
           </li> */}

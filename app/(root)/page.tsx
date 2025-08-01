@@ -1,4 +1,4 @@
-import { getLatestProducts } from '../lib/actions/product.actions';
+import { getLatestProducts } from '../../lib/actions/product.actions';
 import ProductList from '@/components/shared/product/productList';
 
 export default async function Home() {

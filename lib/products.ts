@@ -1,5 +1,5 @@
 import products from '@/app/data/products.json';
-import type { Products, Product } from '@/app/types/index';
+import type { Products, Product } from '@/app/types-old/index';
 
 export async function getAllProducts(): Promise<Products> {
   // This is where you'd write code to fetch the list

@@ -1,9 +1,11 @@
-import CategoriesList from '../components/CategoryList';
+import { getLatestProducts } from '../lib/actions/product.actions';
+import ProductList from '@/components/shared/product/productList';
 
-export default function Home() {
+export default async function Home() {
+  const latestProducts = await getLatestProducts();
   return (
     <>
-      <h1>Wipeout Surf</h1>
+      <ProductList data={latestProducts} title="Newest Arrivals" limit={4} />
     </>
   );
 }

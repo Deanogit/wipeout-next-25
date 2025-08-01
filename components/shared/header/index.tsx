@@ -1,8 +1,7 @@
-import { ShoppingCart, UserIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { APP_NAME } from '@/app/lib/constants';
+import Menu from './menu';
 
 export default function Header() {
   return (
@@ -12,7 +11,7 @@ export default function Header() {
           <Link href="/" className="flex-start">
             <Image
               src="/wipeout-logo.png"
-              alt="Wipeout Surf Logo"
+              alt={`${APP_NAME} Logo`}
               height={400}
               width={770}
               priority={true}
@@ -20,18 +19,8 @@ export default function Header() {
             />
           </Link>
         </div>
-        <div className="space-x-2">
-          <Button asChild variant="ghost">
-            <Link href="/cart">
-              <ShoppingCart /> Cart
-            </Link>
-          </Button>
-          <Button asChild variant="ghost">
-            <Link href="/sign-in">
-              <ShoppingCart /> Sign In
-            </Link>
-          </Button>
-        </div>
+
+        <Menu />
       </div>
     </header>
   );

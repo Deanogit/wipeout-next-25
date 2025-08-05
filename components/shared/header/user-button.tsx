@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { signOutUser, SignOutUser } from '@/lib/actions/user.actions';
+import { signOutUser } from '@/lib/actions/user.actions';
 import { UserIcon } from 'lucide-react';
 
 const UserButton = async () => {

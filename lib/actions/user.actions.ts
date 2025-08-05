@@ -5,6 +5,7 @@ import { signIn, signOut } from '@/auth';
 import { signInFormSchema, signUpFormSchema } from '../validator';
 import { hashSync } from 'bcrypt-ts-edge';
 import { prisma } from '@/db/prisma';
+import { formatError } from '../utils';
 
 export async function signInWithCredentials(
   prevState: unknown,
@@ -64,6 +65,6 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
       throw error;
     }
 
-    return { success: false, message: 'User was not registered' };
+    return { success: false, message: formatError(error) };
   }
 }

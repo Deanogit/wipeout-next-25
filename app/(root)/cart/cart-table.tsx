@@ -5,7 +5,6 @@ import { toast } from 'sonner';
 import { useTransition } from 'react';
 import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.actions';
 import { ArrowRight, Loader, Minus, Plus } from 'lucide-react';
-import { Cart } from '@/types';
 import Link from 'next/link';
 import Image from 'next/image';
 

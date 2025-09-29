@@ -23,6 +23,11 @@ export const insertProductSchema = z.object({
   price: currency,
 });
 
+// Schema for updating products
+export const updateProductSchema = insertProductSchema.extend({
+  id: z.string().min(1, 'Id is required'),
+});
+
 // Schema for signing users in
 export const signInFormSchema = z.object({
   email: z
@@ -114,6 +119,7 @@ export const insertOrderItemSchema = z.object({
   qty: z.number(),
 });
 
+// Schema for the PayPal paymentResult
 export const paymentResultSchema = z.object({
   id: z.string(),
   status: z.string(),

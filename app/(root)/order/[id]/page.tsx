@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getOrderById } from '@/lib/actions/order-actions';
+import { getOrderById } from '@/lib/actions/order.actions';
 import { notFound } from 'next/navigation';
 import { ShippingAddress } from '@/types';
 import OrderDetailsTable from './order-details-table';

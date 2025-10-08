@@ -15,7 +15,7 @@ import { Prisma } from '@prisma/client';
 // import { sendPurchaseReceipt } from '@/email';
 
 // Create order and create the order items
-export async function createOrder() {
+export default async function createOrder() {
   try {
     const session = await auth();
     if (!session) throw new Error('User is not authenticated');

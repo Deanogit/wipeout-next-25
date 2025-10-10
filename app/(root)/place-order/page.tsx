@@ -1,6 +1,6 @@
 import { auth } from '@/auth';
 import { getMyCart } from '@/lib/actions/cart.actions';
-import { getUserByID } from '@/lib/actions/user.actions';
+import { getUserById } from '@/lib/actions/user.actions';
 import { ShippingAddress } from '@/types';
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
@@ -31,7 +31,7 @@ const PlaceOrderPage = async () => {
 
   if (!userId) throw new Error('User not found');
 
-  const user = await getUserByID(userId);
+  const user = await getUserById(userId);
 
   if (!cart || cart.items.length === 0) redirect('/cart');
   if (!user.address) redirect('/shipping-address');

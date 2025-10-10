@@ -4,10 +4,10 @@ import { isRedirectError } from 'next/dist/client/components/redirect-error';
 import { convertToPlainObject, formatError } from '../utils';
 import { auth } from '@/auth';
 import { getMyCart } from './cart.actions';
-import { getUserByID } from './user.actions';
+import { getUserById } from './user.actions';
 import { insertOrderSchema } from '../validator';
 import { prisma } from '@/db/prisma';
-import { CartItem, PaymentResult } from '@/types';
+import { CartItem, PaymentResult, ShippingAddress } from '@/types';
 import { paypal } from '../paypal';
 import { revalidatePath } from 'next/cache';
 import { PAGE_SIZE } from '../constants';
@@ -23,7 +23,7 @@ export async function createOrder() {
     const userId = session?.user?.id;
     if (!userId) throw new Error('User not found');
 
-    const user = await getUserByID(userId);
+    const user = await getUserById(userId);
 
     if (!cart || cart.items.length === 0) {
       return {

@@ -41,7 +41,7 @@ export const productDefaultValues = {
   brand: '',
   description: '',
   price: '0',
-  stock: 0,
+  stock: '0',
   rating: '0',
   numReviews: '0',
   isFeatured: false,
@@ -51,3 +51,9 @@ export const productDefaultValues = {
 export const USER_ROLES = process.env.USER_ROLES
   ? process.env.USER_ROLES.split(', ')
   : ['admin', 'user'];
+
+export const reviewFormDefaultValues = {
+  title: '',
+  description: '',
+  rating: 1,
+};

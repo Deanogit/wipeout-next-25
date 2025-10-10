@@ -36,7 +36,6 @@ const PlaceOrderForm = () => {
   return (
     <form className="w-full" onSubmit={handleSubmit}>
       <PlaceOrderButton />
-      Form
     </form>
   );
 };

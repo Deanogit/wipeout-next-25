@@ -40,9 +40,10 @@ const ProductForm = ({
   const form = useForm<
     z.infer<typeof insertProductSchema> | z.infer<typeof updateProductSchema>
   >({
-    resolver: zodResolver(
-      type === 'Update' ? updateProductSchema : insertProductSchema
-    ) as any,
+    resolver:
+      type === 'Update'
+        ? zodResolver(updateProductSchema)
+        : zodResolver(insertProductSchema),
     defaultValues:
       product && type === 'Update' ? product : productDefaultValues,
   });

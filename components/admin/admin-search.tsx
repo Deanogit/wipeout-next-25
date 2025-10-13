@@ -16,7 +16,14 @@ const AdminSearch = () => {
   const [queryValue, setQueryValue] = useState(searchParams.get('query') || '');
 
   useEffect(() => {
-    setQueryValue(searchParams.get('query') || '');
+    const q = searchParams.get('query') || '';
+
+    // Defer the state update to avoid synchronous setState
+    const frame = requestAnimationFrame(() => {
+      setQueryValue((prev) => (prev !== q ? q : prev));
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, [searchParams]);
 
   return (

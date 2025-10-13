@@ -17,7 +17,8 @@ export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
+    const timer = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   if (!mounted) {

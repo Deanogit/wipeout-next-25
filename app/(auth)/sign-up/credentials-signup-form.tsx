@@ -34,7 +34,7 @@ const CredentialsSignUpForm = () => {
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="space-y-6">
         <div>
-          <Label htmlFor="name">Email</Label>
+          <Label htmlFor="name">Name</Label>
           <Input
             name="name"
             id="name"

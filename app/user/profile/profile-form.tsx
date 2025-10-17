@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useSession } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { toast, Toaster } from 'sonner';
+import { toast } from 'sonner';
 import {
   Form,
   FormControl,

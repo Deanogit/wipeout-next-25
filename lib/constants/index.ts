@@ -55,5 +55,5 @@ export const USER_ROLES = process.env.USER_ROLES
 export const reviewFormDefaultValues = {
   title: '',
   description: '',
-  rating: 1,
+  rating: 0,
 };

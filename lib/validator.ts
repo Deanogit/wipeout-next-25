@@ -21,19 +21,16 @@ export const insertProductSchema = z.object({
   isFeatured: z.boolean(),
   banner: z.string().nullable(),
   price: currency,
-  id: z.string().optional,
 });
 
 // Schema for updating products
 export const updateProductSchema = insertProductSchema.extend({
-  id: z.string().min(1, 'Id is required').optional,
+  id: z.string().min(1, 'Id is required'),
 });
 
 // Schema for signing users in
 export const signInFormSchema = z.object({
-  email: z
-    .email('Invalid email address')
-    .min(3, 'Email must be at least 3 characters'),
+  email: z.string().email('Invalid email address'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
 });
 
@@ -41,9 +38,7 @@ export const signInFormSchema = z.object({
 export const signUpFormSchema = z
   .object({
     name: z.string().min(3, 'Name must be at least 3 characters'),
-    email: z
-      .email('Invalid email address')
-      .min(3, 'Email must be at least 3 characters'),
+    email: z.string().email('Invalid email address'),
     password: z.string().min(6, 'Password must be at least 6 characters'),
     confirmPassword: z
       .string()
@@ -147,7 +142,7 @@ export const insertReviewSchema = z.object({
   productId: z.string().min(1, 'Product is required'),
   userId: z.string().min(1, 'User is required'),
   rating: z.coerce
-    .number<number>()
+    .number()
     .int()
     .min(1, 'Rating must be at least 1')
     .max(5, 'Rating must be at most 5'),

@@ -6,7 +6,12 @@ import { insertProductSchema, updateProductSchema } from '@/lib/validator';
 import { Product } from '@/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
-import { ControllerRenderProps, SubmitHandler, useForm } from 'react-hook-form';
+import {
+  ControllerRenderProps,
+  SubmitHandler,
+  useForm,
+  useWatch,
+} from 'react-hook-form';
 import { z } from 'zod';
 import {
   Form,
@@ -79,9 +84,9 @@ const ProductForm = ({
     }
   };
 
-  const images = form.watch('images');
-  const isFeatured = form.watch('isFeatured');
-  const banner = form.watch('banner');
+  const images = useWatch({ control: form.control, name: 'images' });
+  const isFeatured = useWatch({ control: form.control, name: 'isFeatured' });
+  const banner = useWatch({ control: form.control, name: 'banner' });
 
   return (
     <Form {...form}>

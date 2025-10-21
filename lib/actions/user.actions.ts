@@ -13,7 +13,7 @@ import { hash } from '../encrypt';
 import { prisma } from '@/db/prisma';
 import { formatError } from '../utils';
 import { ShippingAddress } from '@/types';
-import z from 'zod';
+import { z } from 'zod';
 import { getMyCart } from './cart.actions';
 import { PAGE_SIZE } from '../constants';
 import { Prisma } from '@prisma/client';

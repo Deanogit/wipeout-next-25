@@ -42,11 +42,12 @@ const ProductForm = ({
 }) => {
   const router = useRouter();
 
+  const conditionalSchema =
+    type === 'Update' ? updateProductSchema : insertProductSchema;
+  const resolver = zodResolver(conditionalSchema);
+
   const form = useForm<z.infer<typeof insertProductSchema>>({
-    resolver:
-      type === 'Update'
-        ? zodResolver(updateProductSchema)
-        : zodResolver(insertProductSchema),
+    resolver,
     defaultValues:
       product && type === 'Update' ? product : productDefaultValues,
   });

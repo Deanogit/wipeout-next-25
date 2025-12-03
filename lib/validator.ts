@@ -29,12 +29,14 @@ export const updateProductSchema = insertProductSchema.extend({
 });
 
 // Schema for signing users in
+// Enforce min 8 + specify at least 1 uppercase, 1 lowercase, 1 number, 1 special character
 export const signInFormSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
 });
 
 // Schema for signing up a user
+// Enforce min 8 character password, where do I enforce at least one upper, lower, number, and special character...?
 export const signUpFormSchema = z
   .object({
     name: z.string().min(3, 'Name must be at least 3 characters'),

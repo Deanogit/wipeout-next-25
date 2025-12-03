@@ -2,6 +2,7 @@ const encoder = new TextEncoder();
 const key = new TextEncoder().encode(process.env.ENCRYPTION_KEY); // Retrieve key from env var
 
 // Hash function with key-based encryption
+// Change HMAC for bcrypt
 export const hash = async (plainPassword: string): Promise<string> => {
   const passwordData = encoder.encode(plainPassword);
 
